@@ -1,4 +1,4 @@
-# Semestre_4_Snack_Bar_Project
+# Semester_4_Snack_Bar_Project
 HTML/CSS Frontend and JavaScript Backend of a homepage of a snack ordering website
 
 Business Rules:
