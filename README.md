@@ -1,19 +1,19 @@
-# Semestre_4_Projeto_Lanchonete
-Front e Backend em JavaScript de um site de pedidos de lanches
+# Semestre_4_Snack_Bar_Project
+HTML/CSS Frontend and JavaScript Backend of a homepage of a snack ordering website
 
-Regras de Negócio:
+Business Rules:
 
-- Valor de cada Lanche → R$ 10,00
-- Valor de cada adicional → R$ 2,50
-- Valor de cada bebida → R$ 4,00
-- Se gelada →  + R$ 1,00
+- Price of each sandwich → R$ 10,00
+- Price of each sides → R$ 2,50
+- Price of each drink → R$ 4,00
+- If drink is cold →  plus R$ 1,00
 
-Funções:
+Buttons / Functions:
 
-- Novo Pedido → Gera um número aleatório de 1 a 10000 atribui ao campo Código do Pedido e habilita os campos para edição
-- Salvar Pedido → Cria um objeto e adiciona os dados do pedido
-- Fechar Pedido → Concatena as informações dos campos na textarea Pedido
-- Imprimir Cupom → Imprime um documento pdf com as informações do Pedido
-- Limpar Campos → Reseta o formulário/limpa todos os campos
-- Imprimir Todos os Pedidos → Imprime o vetor de objetos com todos os pedidos salvos
-- Sair → fecha a janela
+- Novo Pedido (New Order) → Generates a random number from 1 to 10000, sets it to the Order Code field and enables the fields for editing
+- Salvar Pedido (Save Order) → Creates an object and add to its atributes the order data
+- Fechar Pedido (Close Order) → Concatenates the value of each field in the Order (Pedido Atual) textarea
+- Imprimir Cupom (Print Coupon) → Prints a pdf document with the current Order information
+- Limpar Campos (Clear Fields) → Resets the forms / clear all fields
+- Imprimir Todos os Pedidos (Print all Orders) → Prints a pdf document with all the Orders objects created so far
+- Sair (Exit) → Closes the window
