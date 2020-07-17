@@ -8,7 +8,7 @@ Business Rules:
 - Price of each drink → R$ 4,00
 - If drink is cold →  plus R$ 1,00
 - Orders can't be saved without being closed first
-- All fields must be filled in order to close an order
+- All fields must be filled in order to close an order (except for Observations/Observação)
 - All orders must have a sandwich
 
 Buttons / Functions:
