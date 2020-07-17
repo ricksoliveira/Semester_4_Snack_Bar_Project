@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            FACE BURGUER
+        </title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    </head>
+
+    <body>
+        
+        <div class="container">
+
+            <header id="titulo">FACE BURGUER</header>
+
+            <div class="row" id="botoes">  
+                
+                <fieldset class="border p-2">
+                    <legend class="w-auto">Ações</legend>
+
+                    <input type="button" value="Novo Pedido" class="btn btn-primary" onclick="novoPed()" id="botNovo">
+                    <input type="button" value="Salvar Pedido" class="btn btn-success" onclick="salvarPed()">
+                    <input type="button" value="Fechar Pedido" class="btn btn-success"  onclick="fecharPed()">
+                    <input type="button" value="Imprimir Cupom" class="btn btn-primary"  onclick="imprimir()">
+                    <input type="button" value="Imprimir Todos os Pedidos" class="btn btn-primary"  onclick="imprimirTodos()">
+                    <input type="button" value="Limpar Campos" class="btn btn-warning"  onclick="resetar()">
+                    <input type="button" value="SAIR" class="btn btn-danger"  onclick="sair()">
+                    
+                </fieldset>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <div class="row">
+
+                        <fieldset class="border p-2">
+                            <legend class="w-auto">Dados</legend>
+
+                                <label id="labelCodigo">Código do Pedido<br>
+                                    <input type="text" id="codigo" disabled>
+                                </label>
+    
+                                <br>
+
+                                <form id="nomeReset">
+                                    <label id="labelCliente">Nome do Cliente<br>
+                                        <input type="text" id="cliente" disabled=true>
+                                    </label>
+                                </form>   
+                            
+                        </fieldset>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <fieldset class="border p-2">
+                                <legend class="w-auto">Tipos de Lanches</legend>
+
+                                <select id="tiposLanches" disabled=true>
+                                    <option value="vazio"></option>
+                                    <option value="cachorroquente">Cachorro Quente</option>
+                                    <option value="pernil">Lanche de Pernil</option>
+                                    <option value="xburguer">X-Burguer</option>
+                                    <option value="xsalada">X-Salada</option>
+                                    <option value="xegg">X-Egg</option>
+                                    <option value="xbacon">X-Bacon</option>
+                                    <option value="xtudo">X-Tudo</option>
+                                    <option value="xressaca">X-Ressaca</option>
+                                </select>
+                                
+                            </fieldset>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <fieldset class="border p-2">
+                                <legend class="w-auto">Adicionais</legend>
+
+                                <label class="container">Sim
+                                    <input type="radio" name="adc" id="ADCsim" onclick="adicionais()" disabled=true>
+                                    <span class="radio"></span>
+                                </label>
+                                  
+                                <label class="container">Não
+                                    <input type="radio" name="adc" id="ADCnao" onclick="adicionais()" disabled=true>
+                                    <span class="radio"></span>
+                                </label>
+                                
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    
+                                    <fieldset class="border p-2">
+                                        <legend class="w-auto">Bebida</legend>
+        
+                                        <label class="container">Sim
+                                            <input type="radio" name="boolBebida" id="bebidaSIM" onclick="boolBebida()" disabled=true>
+                                            <span class="radio"></span>
+                                        </label>
+                                          
+                                        <label class="container">Não
+                                            <input type="radio" name="boolBebida" id="bebidaNAO" onclick="boolBebida()" disabled=true>
+                                            <span class="radio"></span>
+                                        </label>
+                                        
+                                    </fieldset>
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    
+                                    <fieldset class="border p-2">
+                                        <legend class="w-auto">Bebida Gelada?</legend>
+        
+                                        <label class="container">Sim
+                                            <input type="radio" name="boolBebidaGelada" checked="checked" id="geladaSIM" disabled=true>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                          
+                                        <label class="container">Não
+                                            <input type="radio" name="boolBebidaGelada" id="geladaNAO" disabled=true>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        
+                                    </fieldset>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                
+                                <fieldset class="border p-2" id="tiposBebidasBorda">
+                                    <legend class="w-auto">Tipos de Bebidas</legend>
+    
+                                    <select id="tiposBebidas">
+                                        <option value="aguamineral">Água mineral</option>
+                                        <option value="aguagas">Água com gás</option>
+                                        <option value="cocacola">Coca-Cola</option>
+                                        <option value="cocazero">Coca-Cola Zero</option>
+                                        <option value="sucocaja">Suco de Cajá</option>
+                                        <option value="sucomelancia">Suco de Melancia</option>
+                                        <option value="sucolaranja">Suco de Laranja</option>
+                                    </select>
+                                    
+                                </fieldset>
+
+                            </div>
+
+                            <div class="row">
+                                
+                                <fieldset class="border p-2">
+                                    <legend class="w-auto">Data do Pedido</legend>
+                                    
+                                    <form id="dataReset">
+                                        <input type="date" id="dataPedido" disabled=true>
+                                    </form>
+                                    
+                                </fieldset>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            
+                            <fieldset class="border p-2" id="adicionais">
+                                <legend class="w-auto">Adicionais</legend>
+
+                                <label class="container">Catchup
+                                    <input type="checkbox" id="catchup" value="Catchup">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Mostarda
+                                    <input type="checkbox" id="mostarda" value="Mostarda">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Maionese
+                                    <input type="checkbox" id="maionese" value="Maionese">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Batata Palha
+                                    <input type="checkbox" id="batatapalha" value="Batata Palha">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Molho
+                                    <input type="checkbox" id="molho" value="Molho">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Pimenta
+                                    <input type="checkbox" id="pimenta" value="Pimenta">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Purê
+                                    <input type="checkbox" id="pure" value="Purê">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                            </fieldset> 
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <fieldset class="border p-2">
+                            <legend class="w-auto">Observações</legend>
+
+                            <form id="obsReset">
+                                <textarea id="obs" disabled=true></textarea>
+                            </form>
+                            
+                            
+                        </fieldset>
+
+                    </div>
+                
+                </div>
+
+                <div class="col-md-4">
+                    
+                    <fieldset class="border p-2">
+                        <legend class="w-auto">Pedido Atual</legend>
+                        
+                        <form id="pedidoReset">
+                            <textarea id="pedidoAtual" disabled></textarea>
+                        </form>   
+                        
+                    </fieldset>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="row" id="oi">
+                
+                <div class="col-md-12">
+
+                        <fieldset class="border p-2">
+                            <legend class="w-auto">Créditos</legend>
+                                
+                            <textarea id="creditos" disabled></textarea>
+                            
+                        </fieldset>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    </body>
+    
+    <script src="javascript/script.js"></script>
+
+</html>
